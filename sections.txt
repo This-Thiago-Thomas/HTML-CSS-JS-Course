@@ -2,3 +2,4 @@
 2 - What’s in the head? Metadata in HTML
 3 - HTML text fundamentals
 4 - Creating hyperlinks
+5 - Advanced text formatting

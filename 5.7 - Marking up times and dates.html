@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Marking up times and dates</title>
+	</head>
+	<body>
+		<time datetime="2020-04-14">14 de abril de 2020</time>
+		<!-- Standard simple date -->
+		<time datetime="2016-01-20">20 January 2016</time>
+		<!-- Just year and month -->
+		<time datetime="2016-01">January 2016</time>
+		<!-- Just month and day -->
+		<time datetime="01-20">20 January</time>
+		<!-- Just time, hours and minutes -->
+		<time datetime="19:30">19:30</time>
+		<!-- You can do seconds and milliseconds too! -->
+		<time datetime="19:30:01.856">19:30:01.856</time>
+		<!-- Date and time -->
+		<time datetime="2016-01-20T19:30">7.30pm, 20 January 2016</time>
+		<!-- Date and time with timezone offset-->
+		<time datetime="2016-01-20T19:30+01:00">7.30pm, 20 January 2016 is 8.30pm in France</time>
+		<!-- Calling out a specific week number-->
+		<time datetime="2016-W04">The fourth week of 2016</time>
+	</body>
+</html>
