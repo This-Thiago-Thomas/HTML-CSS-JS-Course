@@ -3,3 +3,4 @@
 3 - HTML text fundamentals
 4 - Creating hyperlinks
 5 - Advanced text formatting
+6 - Document and website structure
