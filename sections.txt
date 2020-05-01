@@ -4,3 +4,4 @@
 4 - Creating hyperlinks
 5 - Advanced text formatting
 6 - Document and website structure
+7 - Debugging HTML
