@@ -5,3 +5,4 @@
 5 - Advanced text formatting
 6 - Document and website structure
 7 - Debugging HTML
+8 - Multimedia and Embedding
