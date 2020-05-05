@@ -6,3 +6,4 @@
 6 - Document and website structure
 7 - Debugging HTML
 8 - Multimedia and Embedding
+9 - Structuring a page of content
