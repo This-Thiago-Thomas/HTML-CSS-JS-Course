@@ -1,9 +1,0 @@
-1 - Getting started with HTML
-2 - What’s in the head? Metadata in HTML
-3 - HTML text fundamentals
-4 - Creating hyperlinks
-5 - Advanced text formatting
-6 - Document and website structure
-7 - Debugging HTML
-8 - Multimedia and Embedding
-9 - Structuring a page of content

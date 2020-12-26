@@ -1,0 +1,13 @@
+.box {
+	border: 5px solid black;
+	border-block-start: 2px dotted lime;
+	border-block-end: 7px solid blue;
+	margin-block-end: 200px;
+	padding-block-start: 20px;
+	block-size: 200px;
+	background-color: aqua;
+}
+
+.box.vertical {
+	writing-mode: vertical-rl;
+}

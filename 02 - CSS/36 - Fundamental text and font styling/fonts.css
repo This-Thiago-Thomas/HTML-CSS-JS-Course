@@ -1,0 +1,174 @@
+/* Cor e Font Family */
+/*
+p {
+	color: green;
+	font-family: arial;
+}
+*/
+
+
+/* Fontes Comuns */
+/*
+p {
+	font-family: Arial, sans-serif;
+	font-family: Courier New, monospace;
+	font-family: Verdana, sans-serif;
+}
+*/
+
+
+/*Fontes Genéricas*/
+/*
+p {
+	font-family: cursive;
+}
+*/
+
+
+/*Pilhas de fontes*/
+/*
+p {
+	font-family: "Trebuchet MS", Verdana, sans-serif;
+	font-family: Helvetica, Arial, sans-serif;
+}
+*/
+
+
+/* Exemplo 1*/
+/*
+p {
+  color: red;
+  font-family: Helvetica, Arial, sans-serif;
+}
+*/
+
+/* Facilitar os tamanhos das fontes*/
+/*
+html {
+	font-size: 10px;
+}
+
+h1 {
+	font-size: 5rem;
+}
+
+h2 {
+	font-size: 3.5rem;
+}
+
+p, li, a {
+	font-size: 1.5rem;
+}
+*/
+
+/* Estilo e Peso da Fonte, Transformação e Decoração de texto:*/
+/*
+p {
+	font-style: italic;
+	font-style: oblique;
+	font-style: normal;
+}
+
+p {
+	font-weight: bold;
+	font-weight: normal;
+}
+
+h1, h2, p, li {
+	text-transform: uppercase;
+	text-transform: lowercase;
+	text-transform: capitalize;
+	text-transform: full-width;
+	text-transform: none;
+}
+
+h1, h2, p, li {
+	text-decoration: underline;
+	text-decoration: overline;
+	text-decoration: line-through;
+	text-decoration: underline overline line-through wavy blue;
+}
+*/
+
+/* Exemplo 2*/
+/*
+html {
+	font-size: 10px;
+}
+
+h1 {
+	font-size: 5rem;
+}
+
+h2 {
+	font-size: 3.5rem;
+}
+
+p, li, a {
+	font-size: 1.5rem;
+}
+
+li {
+	text-transform: uppercase;
+}
+
+p {
+	font-family: Helvetica, Arial, sans-serif;
+	text-transform: lowercase;
+}
+
+span {
+	font-weight: bolder;
+	font-style: italic;
+	text-decoration: underline;
+	text-transform: capitalize;
+}
+
+footer p {
+	text-decoration: underline aqua;
+}
+*/
+
+/* Sombras */
+/*
+h1 {
+	text-shadow: 20px 20px 2px green;
+	text-shadow: 20px 20px 2px green, 
+	10px 10px 2px yellow;
+}
+*/
+
+
+/* Alinhamento de Texto */
+/*
+p {
+	text-align: left;
+	text-align: right;
+	text-align: center;
+	text-align: justify;
+}
+
+footer p {
+	text-align: center;
+}
+*/
+
+/* Altura da Linha */
+/*
+p {
+	line-height: 2;
+}
+*/
+
+
+/* Espaçamento de letras e palavras */
+/*
+p {
+  letter-spacing: 10px;
+  word-spacing: 4px;
+}
+*/
+
+/* Outros */
+
+/**/

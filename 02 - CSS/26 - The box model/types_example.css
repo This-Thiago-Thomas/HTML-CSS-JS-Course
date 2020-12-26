@@ -1,0 +1,37 @@
+/*Seletores tipos, classe e id
+/*Tipos*/
+/*
+h1 {
+	color: magenta;
+}
+*/
+
+/*Universal*/
+/*
+* {
+	margin: 0;
+}
+
+
+footer *:first-child {
+	color: gray;	
+}
+*/
+
+/*Classe*/
+/*
+.c_special {
+	border: 4px solid blue;
+}
+
+.c_special.c_special2 {
+	border-color: magenta;
+}
+*/
+
+/*IDs*/
+/*
+#i_special {
+	color: red;
+}
+*/

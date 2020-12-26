@@ -1,0 +1,44 @@
+/* Modelo de caixa inline, não respeitando width e height
+/*
+span {
+	background-color: aqua;
+	border: 1px solid magenta;
+	width: 100px;
+	height: 50px;
+	margin: 20px;
+	padding: 20px;
+}
+*/
+/* Modelo de caixa inline-block, agora respeitando width e height*/
+/*
+span {
+	display: inline-block;
+	background-color: aqua;
+	border: 1px solid magenta;
+	width: 100px;
+	height: 50px;
+	margin: 20px;
+	padding: 20px;
+}
+*/
+/* Modelo de caixa padrão */
+
+h1 {
+	background-color: aqua;
+	border: 1px solid green;
+	width: 300px;
+	height: 100px;
+	padding: 20px;
+	margin-bottom:10px;
+} 
+
+/* Modelo de caixa alternativo do mesmo valor do de cima*/
+
+h2 {
+	box-sizing: border-box;
+	background-color: aqua;
+	border: 1px solid green;
+	width: 342px;
+	height: 142px;
+}
+

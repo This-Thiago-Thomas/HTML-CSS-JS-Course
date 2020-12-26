@@ -1,0 +1,29 @@
+.box {
+	width: 400px;
+	height: 400px;
+}
+
+img {
+ height: 100%;
+ width: 100%;
+ object-fit: cover;
+}
+
+
+.myform {
+  border: 2px solid #000;
+  padding: 5px;
+}
+
+.myform input {
+  padding: 10px;
+  font-family: inherit;
+  font-size: 100%;
+}
+
+.myform input[type=submit] {
+  background-color: rebeccapurple;
+  color: white;
+  border-radius: 5px;
+  border: 0px solid white;
+}

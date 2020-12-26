@@ -1,0 +1,81 @@
+/* Teste CSS */
+/*
+p {
+  color: red;
+  background: green;
+}
+
+ol {
+  background-color: black;
+  color: yellow;
+}
+    
+a {
+  color: brown;
+}
+*/
+
+
+
+/* Regras CSS */
+/*
+p {
+  font-size: 10pt;
+  width: 10px;
+  background-color: blue;
+  color: magenta;
+  border: solid;
+}
+
+ol {
+  font-size: 15pt;
+  width: 30px;
+  background-color: green;
+  color: purple;
+  border: dotted;
+}
+    
+a {
+  font-size: 20pt;
+  width: 20px;
+  background-color: cyan;
+  color: gray;
+  border: dashed;
+}
+*/
+
+
+
+/* Funções */
+/*
+p {
+  font-size: 10pt;
+  width: calc(1000px - 500px);
+  height: calc(300px - 100px);
+  background-color: cyan;
+  color: rgba(255,0,0,0.1);
+  border: solid;
+}
+*/
+
+/* @Regras */
+/*
+@media (min-width: 30em) {
+  body {
+    background-color: blue;
+  }
+}
+*/
+
+/* Shorthands */
+/*
+p {
+  background-color: blue;
+  padding: 50px 0px 150px 180px;
+}
+
+ol {
+  background-color: green;
+  margin: 150px 20px;
+}
+*/

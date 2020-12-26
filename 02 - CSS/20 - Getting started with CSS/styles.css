@@ -1,0 +1,70 @@
+/* CSS Início */
+/*
+h1 {
+	color: blue;
+}
+
+p, li {
+	color: green;
+}
+*/
+
+
+
+/* Alterando o Comportamento Padrão do li */
+/*
+li {
+	list-style-type: square;
+}
+*/
+
+
+
+/* Incluindo uma Classe*/
+/*
+.special {
+  color: orange;
+  font-weight: bold;s
+}
+*/
+
+
+
+/* Estilizando coisas baseadas em sua localização no documento*/
+/*
+li em {
+  color: rebeccapurple;
+}
+
+h1 + p {
+  font-size: 200%;
+}
+*/
+
+
+
+/* Estilizando coisas baseadas no estado*/
+/*
+a:link {
+	color: pink;
+}
+
+a:visited {
+	color: black;
+}
+
+a:hover {
+	text-decoration: none;
+}
+*/
+
+
+
+/* Combinando seletores e combinadores */
+/*
+body h1 + .special {
+  color: yellow;
+  background-color: black;
+  padding: 5px;
+}
+*/

@@ -1,0 +1,60 @@
+@font-face {
+    font-family: 'quicksandregular';
+    src: url('fontes/quicksand-regular-webfont.woff2') format('woff2'),
+         url('fontes/quicksand-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'alex_brushregular';
+    src: url('fontes/alexbrush-regular-webfont.woff2') format('woff2'),
+         url('fontes/alexbrush-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/*
+    font-family: 'Grenze Gotisch', cursive;
+
+    font-family: 'Yanone Kaffeesatz', sans-serif;*/
+
+/* General setup */
+
+html {
+  font-size: 10px;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+body {
+  width: 80%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Typography */
+
+h1, h2 {
+  font-family: "Grenze Gotisch", cursive;
+}
+
+h1 {
+  font-size: 3.2rem;
+}
+
+h2 {
+  font-size: 2.4rem;
+}
+
+p {
+  font-family: "Yanone Kaffeesatz", sans-serif;
+  font-size: 1.4rem;
+  line-height: 1.6;
+  word-spacing: 0.6rem;
+}

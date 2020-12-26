@@ -1,0 +1,70 @@
+/*---Lista de Seletores---*/
+
+
+/*Separados*/
+/*
+h1 {
+	color: purple;
+}
+
+.special {
+	color: purple
+}
+*/
+
+/*Juntos*/
+/*
+h1, .special {
+	color: purple;
+}
+
+h1, ..special {    - Da Erro!
+	color: purple;
+}
+*/
+
+
+/*---*/
+
+/*---Tipos de Seletores---*/
+
+
+/*Tipos, classe e ID*/
+/*
+h1 {
+	color: orange;
+}
+
+.c_special {
+	color: rebeccapurple;
+}
+
+#i_special {
+	color: magenta;
+}
+*/
+
+/*Seletor de atributo*/
+/*
+a:hover {
+	color: green;
+}
+
+p::first-line {
+	background-color: aqua;
+}
+*/
+
+/*Pseudo-classes and pseudo-elements*/
+/*Da erro pq nao é filho direto*/
+/*
+main > p { 
+	background-color: darkgray;
+}
+
+article > p {
+	background-color: darkgray;
+}
+*/
+
+/*---*/

@@ -1,0 +1,33 @@
+/*Background Color*/
+/*
+h1 {
+	background-color: lime;
+}
+
+h2 {
+	background-color: magenta;
+}
+
+p {
+	background-color: yellow;
+}
+*/
+/*Backgrounds*/
+
+html {
+	background-color: aqua;
+}
+
+.a {
+	background-image: url(small_duck.jpeg);
+	background-repeat: no-repeat;
+	background-position: right center;
+	border: 5px solid lime;
+	border-radius: 10px;
+	background-size: contain;
+}
+
+.b {
+	background-image: url(big_duck.jpeg);
+	background-size: 100px 100px;
+}

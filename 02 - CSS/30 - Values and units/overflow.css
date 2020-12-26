@@ -1,0 +1,24 @@
+html {
+	background-color: black;
+  color: white;
+	all: initial;
+}
+
+.box {
+	width: 400px;
+	height: 150px;
+	border: 5px dotted lime;
+/*	overflow: visible;*/   /*Visivel */
+/*	overflow: hidden;*/   /*Escondido */
+/*	overflow: scroll;*/   /*Normal */
+/*	overflow: hidden scroll;*/   /*X e Y */
+/*	overflow-x: visible;*/  /*X */
+/*	overflow-y: visible;*/   /*Y */
+	overflow: visible;   /*Automatico */
+  opacity: 0.5;
+}
+
+.pato {
+	overflow-x: auto;
+	
+}

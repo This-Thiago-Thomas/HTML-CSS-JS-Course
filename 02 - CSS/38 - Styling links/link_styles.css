@@ -1,0 +1,114 @@
+/* Estilizando os links*/
+/*
+a {
+	outline: none;
+	text-decoration: none;
+}
+
+a:link {
+	color: #FF66B2;
+}
+
+a:visited {
+	color: #99004C;
+}
+
+a:focus {
+	background: #FFCCE5;
+	border-bottom: 1px solid;
+}
+
+a:hover {
+	background: #FF99CC;
+	border-bottom: 1px solid;
+}
+
+a:active{
+	#background: #660033;
+	color: white;
+}
+*/
+
+/*Colocando ícones nos links*/
+/*
+a[href*="http"] {
+	background: url(image.png) no-repeat 100% 0;
+	background-size: 16px 16px;
+	padding-right: 19px; 
+}
+*/
+
+/* Criando Nav de Menus com links*/
+/*ul {
+	padding: 0;;
+	width: 100%
+}
+
+li {
+	display: inline;
+}
+
+nav a {
+	outline: none;
+	text-decoration: none;
+	display: inline-block;
+	width: 19.5%;
+	margin-right: 0.625%;
+	text-align: center;
+	line-height: 3;
+	color: black;
+}
+
+li:last-child a{
+	margin-right: 0;
+}
+
+nav a:link, nav a:visited, nav a:focus   {
+	background: yellow;
+}
+
+
+nav a:hover {
+	background: orange;
+}
+
+nav a:active {
+	background: red;
+	color: white;
+}
+*/
+
+
+/* Exercicio nav */
+ul {
+	padding: 0;
+}
+
+li {
+	display: inline;
+}
+
+nav a {
+	outline: none;
+	text-decoration: none;
+	display: inline-block;
+	width: 110px;
+	margin-right: 10px;
+	line-height: 3;
+	text-align: center;
+	color: black;
+}
+
+nav a:link, nav a:visited, nav a:focus {
+	background: aqua;
+}
+
+nav a:hover {
+	background: blue;
+	color: white;
+}
+
+nav a:active {
+	background: black;
+	color: white;
+}

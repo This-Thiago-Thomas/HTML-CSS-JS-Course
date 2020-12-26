@@ -1,0 +1,78 @@
+/* || Estilo Geral */
+
+html {
+	background-color: blue;
+}
+
+header, nav, main, footer {
+	background-color: aqua;
+	border: 5px solid black;
+	border-radius: 10px;
+	margin-bottom: 1px;
+	padding: 0 10px;
+}
+
+/* || typography */
+
+h1, h2, h3 {
+	font-family: Tahoma, Geneva, sans-serif;
+	color: darkblue;
+}
+
+p, input, li {
+	font-family: 'Open Sans Condensed', sans-serif;
+	color: black;
+}
+
+h1 {
+	text-align: center;
+	font-size: 4em;
+	padding: 0;
+	margin: 20px 0;
+}
+
+h2 {
+	font-size: 2em;
+	margin: 10px;
+}
+
+h3 {
+	font-size: 1em;
+}
+
+main p {
+	width: 50%;
+}
+
+/* || header navbar */
+
+
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
+li {
+	float: left;
+}
+
+li a {
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+
+li a:hover {
+	background-color: white;
+	color: blue;
+}
+
+@media screen and (max-width: 700px) {
+	li {
+		float: none;
+	}
+}
