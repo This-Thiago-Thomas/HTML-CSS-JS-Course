@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Interno</title>
+</head>
+<body>
+    <button type="button">Clique para criar um parágrafo</button>
+    <button>Outro botão para criar paragrafo</button>
+    <script>
+        function criarParagrafo() {
+            let p = document.createElement('p');
+            p.textContent = 'Você clicou no botão!';
+            document.body.appendChild(p);
+        }
+
+        let botoes = document.querySelectorAll('button');
+
+        for(let i = 0; i < botoes.length; i++) {
+            botoes[i].addEventListener('click', criarParagrafo);
+        }
+    </script>
+</body>
+</html>
