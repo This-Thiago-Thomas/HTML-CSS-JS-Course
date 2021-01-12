@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Contact Lists</title>
+</head>
+<body>
+    <label for="search">Search by contact name: </label>
+    <input type="text" id="search" />
+    <button id="btn">Search</button>
+
+    <p id="result"></p>
+
+    <script>
+        let contacts = ['Jhon:12345', 'Peter:4321', 'Mary:73645'];
+        let input = document.getElementById('search');
+        let btn = document.getElementById('btn');
+        let p = document.getElementById('result');
+
+        btn.addEventListener('click', function(){
+            let nameSearch = input.value;
+            input.value = '';
+            input.focus();
+            for(let i = 0; i < contacts.length; i++) {
+                let splitContact = contacts[i].split(':');
+                if(splitContact[0] === nameSearch) {
+                    p.textContent = "The number of "+splitContact[0]+" is "+splitContact[1];  
+                    break;
+                } else {
+                    p.textContent = "Contact not found!";
+                }
+            }
+        }); 
+
+    </script>
+</body>
+</html>
