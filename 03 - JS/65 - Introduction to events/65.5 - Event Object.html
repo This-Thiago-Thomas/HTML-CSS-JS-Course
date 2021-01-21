@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Object</title>
+    <style>
+        #btn {
+            width: 100px;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <button id="btn">Hover Me!</button>
+    <script>
+        let btn = document.getElementById('btn');
+
+        btn.onmouseover = function(evt) {
+            evt.target.style.backgroundColor = 'blue';
+            document.body.style.background = 'blue';
+        }
+
+        btn.onmouseout = function(evt) {
+            evt.target.style.backgroundColor = 'white';
+            document.body.style.background = 'white';
+        }
+    </script>
+</body>
+</html>

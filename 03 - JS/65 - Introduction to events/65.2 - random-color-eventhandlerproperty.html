@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Color Example</title>
+</head>
+<body>
+    <button id="btn">Change Color</button>
+    <script>
+        let btn = document.getElementById('btn');
+
+        function random(number) {
+            return Math.floor(Math.random() * (number));
+        }
+
+
+        function bgChange() {
+            let rndCol = 'rgb('+random(255)+','+random(255)+','+random(255)+')';
+            document.body.style.backgroundColor = rndCol;
+        }
+        
+        btn.onmouseover = bgChange;      
+
+       
+    </script>
+</body>
+</html>
