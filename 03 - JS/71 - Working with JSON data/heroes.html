@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <title>Our superheroes</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Faster+One" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+
+      <header>
+
+      </header>
+
+      <section>
+
+      </section>
+
+    <script>
+    const header = document.querySelector('header');
+    const section = document.querySelector('section');
+
+    let URLrequisitada = 'https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json';
+    let requisicao = new XMLHttpRequest();
+    
+    requisicao.open('get',URLrequisitada);
+    //requisicao.responseType = 'json';
+    requisicao.responseType = 'text';
+    requisicao.send();
+    requisicao.onload = function(){
+        let superHeroesText = requisicao.response;
+        console.log(superHeroesText);
+        console.log(JSON.parse(superHeroesText));
+        //let superHeroes = requisicao.response;
+        //popularHeader(superHeroes);
+        //mostrarHeroes(superHeroes);
+    }
+
+    /*
+    function popularHeader(json) {
+        let meuH1 = document.createElement('h1');
+        meuH1.textContent = 'Thiago '+ json.squadName;
+        header.appendChild(meuH1);
+
+        let meuP = document.createElement('p');
+        meuP.textContent = `Cidade natal: ${json.homeTown}  //Formação: ${json.formed}`
+        header.appendChild(meuP);        
+    }
+
+    function mostrarHeroes(json) {
+        let heroes = json['members'];
+
+        for (let i = 0; i < heroes.length; i++) {
+            let meuArticle = document.createElement('article');
+            let meuH2 = document.createElement('h2');
+            let meuP1 = document.createElement('p');
+            let meuP2 = document.createElement('p');
+            let meuP3 = document.createElement('p');
+            let meuUl = document.createElement('ul');
+            
+            meuH2.textContent = heroes[i].name;
+            meuP1.textContent = 'Identidade secreta: ' + heroes[i].secretIdentity;
+            meuP2.textContent = 'Idade: ' + heroes[i].age;
+            meuP3.textContent = 'Super-poderes: ';
+
+            let superPoderes = heroes[i].powers;
+
+            for (let j = 0; j < superPoderes.length; j++) {
+                let meuLi = document.createElement('li');
+                meuLi.textContent = superPoderes[j];
+                meuUl.appendChild(meuLi);
+            }
+
+            meuArticle.appendChild(meuH2);
+            meuArticle.appendChild(meuP1);
+            meuArticle.appendChild(meuP2);
+            meuArticle.appendChild(meuP3);
+            meuArticle.appendChild(meuUl);
+
+            section.appendChild(meuArticle);
+        }
+    }
+    */
+    
+
+    </script>
+  </body>
+</html>
