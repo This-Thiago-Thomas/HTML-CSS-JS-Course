@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Simple XHR async callback example</title>
+  </head>
+  <body>
+    <script>
+        //Funcao com callback
+        function soma(a,b,callback) {
+            let soma = a+b;
+            callback(soma);
+        }
+        //Funcao com callback
+        function multiplicacao(a,b,callback) {
+            let multi = a*b;
+            callback(multi);
+        }
+
+        function exibirResultado(valor) {
+            //console.log("O valor foi "+valor);
+            if(valor>10) {
+                console.log("resultado maior que 10");
+            }else{
+                console.log("resultado menor que 10");
+            }
+        }
+
+        //1
+        soma(2,2,exibirResultado);
+        //2
+        multiplicacao(4,4,exibirResultado);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise 3</title>
+</head>
+<body>
+    <script>
+        let url = 'https://dog.ceo/api/breeds/image/random';
+        let img = document.getElementById('dog');
+        console.log("primeiro")
+
+        fetch(url)
+            .then(function(dado) {
+                setTimeout(function(){console.log("terceiro ")},5000)
+                return dado.json();
+            })
+            .then(function({message}) {
+                setTimeout(function(){console.log("quarto "+ message)},5000)
+                //img.src = message;
+            })
+            .catch(function(error) {
+                console.log("Não pegou "+error.message);
+            })
+
+        console.log("segundo");
+    </script>
+</body>
+</html>

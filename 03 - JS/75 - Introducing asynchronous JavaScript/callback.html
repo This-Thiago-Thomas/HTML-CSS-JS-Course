@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function carregarArquivo(link, tipo, callback) {
+            //Configura a requisição
+            let xhr = new XMLHttpRequest();
+            xhr.open('GET', link);
+            xhr.responseType = tipo;
+            
+            //Quando carregar envia a resposta pra funcao de callback
+            xhr.onload = function() {
+                callback(xhr.response);
+            }
+
+            //Carrega a foto
+            xhr.send();
+        }
+
+        function mostrarImagem(blob) {
+            let linkDoObjeto = URL.createObjectURL(blob);
+
+            let img = document.createElement('img');
+            img.src = linkDoObjeto;
+            img.id = 'test';
+            document.body.appendChild(img);
+        }
+
+
+    </script>
+</body>
+</html>

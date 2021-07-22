@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let url = 'https://dog.ceo/api/breeds/image/random';
+        let img;
+        console.log("primeiro")
+
+        fetch(url)
+            .then(function(dado) {
+                if(!dado.ok) {
+                    throw new Error('HTTP Error, status '+dado.status);
+                }
+                return dado.json();
+            })
+            .then(function({message}) {
+                console.log("link da imagem "+message);
+                img = document.createElement('img');
+                img.src = message;
+                document.body.appendChild(img);
+            })
+            .catch(function(error) {
+                console.log("Não pegou "+error.message);
+            })
+
+        console.log("segundo");
+    </script>
+</body>
+</html>
