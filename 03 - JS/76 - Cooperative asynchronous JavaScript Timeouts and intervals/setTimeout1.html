@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function sayHi(nome){
+            alert('Hi '+nome);
+        }
+
+        //Executa o timeout na qtd de segundos setada.
+        let idtimeout = setTimeout(sayHi, 10000, 'Chris');
+        console.log(idtimeout);
+        
+        //Cancela a execução anterior
+        clearTimeout(idtimeout);
+    </script>
+</body>
+</html>
