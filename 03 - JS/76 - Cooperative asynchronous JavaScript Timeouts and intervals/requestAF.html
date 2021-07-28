@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        html {
+            background-color: white;
+            height: 100%;
+        }
+
+        body {
+            height: inherit;
+            background-color: red;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        div {
+            display: inline-block;
+            font-size: 10rem;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <div>↻</div>
+    <script>
+        let spinner = document.querySelector('div');
+        let voltas = 0;
+        let tempoInicial = null;
+        let rAF;
+        let rodando = true;
+
+        function draw (timestamp) {
+            if (!tempoInicial) {
+                tempoInicial = timestamp
+            }
+            voltas = (timestamp - tempoInicial) / 3;
+            voltas %= 360;
+            spinner.style.transform = `rotate(${voltas}deg)`
+            rAF = requestAnimationFrame(draw);
+        }
+        draw();
+
+        function startStop (){
+            if(rodando) {
+                rodando = false;
+                cancelAnimationFrame(rAF);
+            } else {
+                rodando = true;
+                draw();
+            }
+        }
+
+        document.body.onclick = startStop;
+
+    </script>
+</body>
+</html>
