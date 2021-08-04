@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .foto {
+            border: 2px solid magenta;
+            border-radius: 5px;
+            width: 400px;
+            height: 400px;
+        }
+    </style>
+    <title>Promise 1</title>
+</head>
+<body>
+    <p>This is my page</p>
+    <script>
+        let promise = fetch('https://dog.ceo/api/breeds/image/random');
+        let promise2 = promise.then(function(response){
+            if(!response.ok){
+                throw new Error(`HTTP Error! status: ${response.status}`);
+            } else {
+                //return response.blob();
+                return response.json();
+            }
+        });
+        let promise3 = promise2.then(function({message}){
+            //let objetoURL = URL.createObjectURL(meuBlob);
+            let img = document.createElement('img');
+            img.className = "foto";
+            img.src = message;
+            document.body.appendChild(img);
+        });
+        let promise4 = promise3.catch(function(erro) {
+            console.log('Ocorreu um problema com a sua operação fetch: ' + erro.message);
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise All</title>
+</head>
+<body>
+    <script>
+        function fetchAndDecode(url, tipo) {
+            return fetch(url).then(function(response) {
+                if(!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                } else {
+                    if(tipo === 'blob') {
+                        return response.blob();
+                    } else if(tipo === 'text') {
+                        return response.text();
+                    }
+                }
+            }).catch(function(erro) {
+                console.log('Ocorreu um problema com a sua operação fetch: ' + erro.message);
+            })
+        }
+
+        let coffee = fetchAndDecode('coffee.jpg', 'blob');
+        let tea = fetchAndDecode('tea.jpg', 'blob');
+        let description = fetchAndDecode('description.txt', 'text');
+
+        Promise.all([coffee, tea, description]) 
+            .then(function(values) {
+                console.log(values); 
+               
+                let objetoURL1 = URL.createObjectURL(values[0]);
+                console.log(objetoURL1);
+                let objetoURL2 = URL.createObjectURL(values[1]);
+                let objetoURL3 = values[2];
+
+                let img1 = document.createElement('img');
+                let img2 = document.createElement('img');
+                img1.src = objetoURL1;
+                img2.src = objetoURL2;
+                document.body.appendChild(img1);
+                document.body.appendChild(img2);
+
+                let p = document.createElement('p');
+                p.textContent = objetoURL3;
+                document.body.appendChild(p);
+            });
+    </script>
+</body>
+</html>
