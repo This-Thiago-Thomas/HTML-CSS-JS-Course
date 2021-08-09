@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Promise</title>
+</head>
+<body>
+    <script>
+        /*
+        //Minha primeira promise
+        let timeoutPromise = new Promise(function(resolve, reject) {
+            setTimeout(
+                function(){ resolve('Sucess!'); }, 2000
+            );
+        })
+
+        timeoutPromise
+            .then(function(mensagem) {
+                console.log(messagem);
+            }
+        )
+        
+        */
+
+        /* 
+        //Minha segunda promise
+        function timeoutPromise(mensagem, delay) {
+            return new Promise(function(resolve, reject) {
+                if (mensagem === '' || typeof mensagem !== 'string') {
+                    reject('Mensagem vazia ou não é uma string');
+                } else if (delay < 0 || typeof delay !== 'number') {
+                    reject('Valor de delay é negativo ou não é um numero');
+                } else {
+                    setTimeout(function() {
+                        resolve(mensagem);
+                    }, delay);
+                }
+            })
+        }
+
+        timeoutPromise('Oie', 1000)
+            .then(function(mensagem){
+                console.log(mensagem);
+            })
+            .catch(function(erro){
+                console.log('Error: ' + erro);
+            });
+        */
+
+        function promiseTeste(msg, tempo) {
+            return new Promise(function(resolve, reject) {
+                if(msg === 'falhe') {
+                    reject('Falhou! pela mensagem '+ msg);
+                } else {
+                    setTimeout(function() {
+                        resolve('Pegou! sua mensagem é: ' + msg);
+                    }, tempo);
+                }
+            })
+        }
+
+        promiseTeste('falhe', 5000)
+            .then(function(msg){
+                alert(msg);
+            })
+            .catch(function(erro){
+                console.log('Erro: ' + erro);
+            })
+    </script>
+</body>
+</html>
