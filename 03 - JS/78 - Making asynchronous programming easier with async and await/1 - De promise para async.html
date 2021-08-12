@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise para async</title>
+</head>
+<body>
+    <script>
+        // Promise
+        /* 
+        fetch('coffee.jpg')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return response.blob();
+            })
+            .then(myBlob => {
+                let objectURL = URL.createObjectURL(myBlob);
+                let image = document.createElement('img');
+                image.src = objectURL;
+                document.body.appendChild(image);
+            })
+            .catch(e => {
+                console.log('There has been a problem with your fetch operation: ' + e.message);
+            });
+        */
+        //Async/Await
+        /*
+        async function minhaFetch() {
+            let response = await fetch('coffee.jpg');
+            if(!response.ok){
+               throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            let meuBlob = await response.blob();
+            let objetoURL = URL.createObjectURL(meuBlob);
+            let img = document.createElement('img');
+            img.src = objetoURL;
+            document.body.appendChild(img);
+        }
+
+        minhaFetch()
+            .catch(function(erro){
+                console.log('Houve um erro ao carregar a imagem: '+erro);
+            })
+        */
+
+        //Async e promise
+        async function minhaFetch() {
+            let response = await fetch('coffee.jpg');
+            if(!response.ok) {
+               throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            return await response.blob();
+        }
+        minhaFetch()
+            .then(function(blob){
+                let objetoURL = URL.createObjectURL(blob);
+                let img = document.createElement('img');
+                img.src = objetoURL;
+                document.body.appendChild(img);
+            })
+            .catch(function(erro){
+                console.log(erro);
+            })
+
+       
+    </script>
+</body>
+</html>

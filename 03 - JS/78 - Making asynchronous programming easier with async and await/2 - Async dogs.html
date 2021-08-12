@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async Dogs</title>
+</head>
+<body>
+    <img src="" id="dog" alt="">
+    <script>
+        let url = 'https://dog.ceo/api/breeds/image/random';
+        let img = document.getElementById('dog');
+
+        async function dogs() {
+            let dadoDog = await fetch(url);
+            if(!dadoDog.ok) {
+                throw new Error('HTTP Error, status '+dado.status);
+            }
+            
+            let dogJson = await dadoDog.json();
+            img.src = dogJson.message;
+        }
+
+        dogs().catch(function(erro){
+            console.log(erro);
+        })
+    </script>
+</body>
+</html>
