@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Demonstration of handling erros</title>
+  </head>
+  <body>
+    <script>
+      // Define custom promise function
+			//Error 1
+      function timeoutPromiseResolve(interval) {
+        return new Promise((resolve, reject) => {
+          setTimeout(function(){
+            resolve("done");
+          }, interval);
+        });
+      };
+
+      function timeoutPromiseReject(interval) {
+				return new Promise((resolve, reject) => {
+					setTimeout(function(){
+						reject("error");
+					}, interval);
+				});
+			};
+
+      //Slow async await
+      async function timeTest() {
+        await timeoutPromiseResolve(3000);
+        await timeoutPromiseReject(3000);
+        await timeoutPromiseResolve(3000);
+      }
+
+      //Fast async await
+      async function timeTest2() {
+        const timeoutPromise1 = timeoutPromise(3000);
+        const timeoutPromise2 = timeoutPromise(3000);
+        const timeoutPromise3 = timeoutPromise(3000);
+
+        await timeoutPromise1;
+        await timeoutPromise2;
+        await timeoutPromise3;
+      }
+
+			//Error 2
+			/*
+      let startTime = Date.now();
+      timeTest().then(() => {})
+				.catch(e => {
+					let finishTime = Date.now();
+        	let timeTaken = finishTime - startTime;
+        	alert("Time taken in milliseconds: " + timeTaken);
+				})
+
+			function timeoutPromiseResolve(interval) {
+				return new Promise((resolve, reject) => {
+					setTimeout(function(){
+						resolve("successful");
+					}, interval);
+				});
+			};
+
+			function timeoutPromiseReject(interval) {
+				return new Promise((resolve, reject) => {
+					setTimeout(function(){
+						reject("error");
+					}, interval);
+				});
+			};
+
+			async function timeTest() {
+				const timeoutPromiseResolve1 = timeoutPromiseResolve(5000);
+				const timeoutPromiseReject2 = timeoutPromiseReject(2000);
+				const timeoutPromiseResolve3 = timeoutPromiseResolve(3000);
+
+				const results = await Promise.all([timeoutPromiseResolve1, timeoutPromiseReject2, timeoutPromiseResolve3]);
+				return results;
+			}
+
+			let startTime = Date.now();
+			timeTest().then(() => {
+			}).catch(e => {
+				console.log(e);
+				let finishTime = Date.now();
+				let timeTaken = finishTime - startTime;
+				alert("Time taken in milliseconds: " + timeTaken);
+			})
+			*/
+
+    </script>
+  </body>
+</html>
