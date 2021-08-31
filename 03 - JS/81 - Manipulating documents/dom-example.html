@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .highlight {
+          color: white;
+          background-color: black;
+          padding: 10px;
+          width: 250px;
+          text-align: center;
+        }
+    </style>
+    <title>Simple DOM example</title>
+  </head>
+  <body>
+      <section>
+        <img src="dinosaur.png" alt="A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human, with small arms, and a large head with lots of sharp teeth.">
+        <p>Here we will add a link to the <a href="https://www.mozilla.org/">Mozilla homepage</a></p>
+      </section>
+      <script>
+          let link = document.querySelector('a');
+          link.textContent = 'Mozilla Developer Network';
+          link.href = 'https://developer.mozilla.org';
+          
+          let section = document.querySelector('section');
+          
+          let p = document.createElement('p');
+          p.textContent = 'We hope you enjoyed the ride';
+
+          section.appendChild(p);
+
+          let texto = document.createTextNode('— the premier source for web development knowledge.');
+          
+          let linkPara = document.querySelector('p'); 
+          linkPara.appendChild(texto);
+          //section.removeChild(linkPara);  remove da section
+          //linkPara.remove();  se auto remove
+          //linkPara.parentNode.removeChild(linkPara); se auto remove antigo
+          /*
+          p.style.color = 'white';
+          p.style.backgroundColor = 'black';
+          p.style.padding = '10px';
+          p.style.width = '250px';
+          p.style.textAlign = 'center';
+          */
+          p.setAttribute('class', 'highlight');
+      </script>
+  </body>
+</html>
