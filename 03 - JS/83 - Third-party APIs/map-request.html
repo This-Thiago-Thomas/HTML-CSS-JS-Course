@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapquest example</title>
+    <style>
+      #map {
+        width: 600px;
+        height: 600px;
+      }
+    </style>
+    <script src="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.css"/>
+    <script>
+      // 1. The basic part of the example
+      var L;
+
+      window.onload = function() {
+        L.mapquest.key = 'your-api-key';
+
+        // 'map' refers to a <div> element with the ID map
+        var map = L.mapquest.map('map', {
+          center: [-8.0572481,-34.9115565],
+          layers: L.mapquest.tileLayer('map'),
+          zoom: 13
+        });
+        /*
+        map.addControl(L.mapquest.control({
+            position: 'topleft'
+        }));
+        */
+        map.addControl(L.mapquest.satelliteControl());
+        
+        L.marker([-8.0629473,-34.9031033], {
+            icon: L.mapquest.icons.marker({
+                primaryColor: '#FF0000',
+                secondaryColor: '#000000',
+                shadow: true,
+                size: 'md'
+            })
+        })
+        .bindPopup('Caldeirão da Ilha!!')
+        .addTo(map);
+
+        L.marker([-8.040311553795577, -34.89678103352106], {
+            icon: L.mapquest.icons.marker({
+                primaryColor: '#FF0000',
+                secondaryColor: '#FFFFFF',
+                shadow: true,
+                size: 'md'
+            })
+        })
+        .bindPopup('Casa da Barbie!!')
+        .addTo(map);
+
+        L.marker([-8.026577021348047, -34.890896625958945], {
+            icon: L.mapquest.icons.marker({
+                primaryColor: '#000000',
+                secondaryColor: '#000000',
+                shadow: true,
+                size: 'md'
+            })
+        })
+        .bindPopup('Casa da Barbie!!')
+        .addTo(map);
+
+        //Casa da Barbie = -8.040311553795577, -34.89678103352106
+        //Lixão = -8.026577021348047, -34.890896625958945
+
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Simple Mapquest example</h1>
+
+    <div id="map"></div>
+  </body>
+</html>
