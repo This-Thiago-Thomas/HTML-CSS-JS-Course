@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+      }
+    </style>
+    <title>Canvas</title>
+  </head>
+  <body>
+    <canvas class="myCanvas">
+      <p>Seu navegador não pega, que bad :(</p>
+    </canvas>
+
+    <script>
+      //Configurando o canvas
+      const canvas = document.querySelector('.myCanvas');
+      const largura = canvas.width = window.innerWidth;
+      const altura = canvas.height = window.innerHeight;
+
+      //Pegando o contexto 2d
+      const cxto = canvas.getContext('2d');
+      
+      //Desenhando o fundo preto
+      cxto.fillStyle = 'rgb(0,0,100)';
+      cxto.fillRect(0,0,largura, altura);
+
+      cxto.strokeStyle = 'white';
+      cxto.lineWidth = 1;
+      cxto.font = '36px arial';
+      cxto.strokeText('Texto no canvas stk',50,50);
+
+      cxto.fillStyle = 'magenta';
+      cxto.font = '36px cursive';
+      cxto.fillText('Texto canvas fill', 50, 100);
+
+
+    </script>
+  </body>
+</html>

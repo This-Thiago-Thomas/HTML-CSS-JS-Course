@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+      }
+    </style>
+    <title>Canvas</title>
+  </head>
+  <body>
+    <canvas class="myCanvas">
+      <p>Seu navegador não pega, que bad :(</p>
+    </canvas>
+
+    <script>
+      //Configurando o canvas
+      const canvas = document.querySelector('.myCanvas');
+      const largura = canvas.width = window.innerWidth;
+      const altura = canvas.height = window.innerHeight;
+
+      //Pegando o contexto 2d
+      const cxto = canvas.getContext('2d');
+      
+      //Começando a desenhar
+      cxto.fillStyle = 'rgb(0,0,100)';
+      cxto.fillRect(0,0,largura, altura);
+
+      //Desenhando uma imagem
+      let img = new Image();
+      img.src = 'image.png';
+      img.onload = function() {
+        cxto.drawImage(img,50,50,500,200)
+      }
+
+
+    
+
+
+    </script>
+  </body>
+</html>
