@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+      }
+    </style>
+    <title>Canvas</title>
+  </head>
+  <body>
+    <canvas class="myCanvas">
+      <p>Seu navegador não pega, que bad :(</p>
+    </canvas>
+
+    <script>
+      //Configurando o canvas
+      const canvas = document.querySelector('.myCanvas');
+      const largura = canvas.width = window.innerWidth;
+      const altura = canvas.height = window.innerHeight;
+
+      //Pegando o contexto 2d
+      const cxto = canvas.getContext('2d');
+      
+      //Começando a desenhar
+      cxto.fillStyle = 'rgb(0,0,100)';
+      cxto.fillRect(0,0,largura, altura);
+
+      //Coloca a coordenada no meio
+      cxto.translate(largura/2, altura/2);
+
+      //Carregando a imagem
+      let img = new Image();
+      img.src = 'andando.png';
+      img.onload = draw;
+
+      //Iniciando as variáveis
+      let sprite = 0;
+      let coordX = 0;
+
+      //Função da animação
+      function draw() {
+        cxto.fillRect(-(largura/2), -(altura/2), largura, altura);
+        cxto.drawImage(img, (sprite*102), 0, 102, 148, 0+coordX, -74, 102, 148);
+
+        if(coordX % 13 === 0) {
+          if(sprite === 5) {
+            sprite = 0;
+          } else {
+            sprite++;
+          }
+        }
+        
+        if(coordX > largura/2) {
+          let novaPosInicial = -((largura/2) + 102);
+          coordX = Math.ceil(novaPosInicial);
+          console.log(coordX);
+        } else {
+          coordX += 2;
+        }
+        
+        requestAnimationFrame(draw)
+        
+      }
+    </script>
+  </body>
+</html>

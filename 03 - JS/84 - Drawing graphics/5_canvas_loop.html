@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+      }
+    </style>
+    <title>Canvas</title>
+  </head>
+  <body>
+    <canvas class="myCanvas">
+      <p>Seu navegador não pega, que bad :(</p>
+    </canvas>
+
+    <script>
+      //Configurando o canvas
+      const canvas = document.querySelector('.myCanvas');
+      const largura = canvas.width = window.innerWidth;
+      const altura = canvas.height = window.innerHeight;
+
+      //Pegando o contexto 2d
+      const cxto = canvas.getContext('2d');
+      
+      //Começando a desenhar
+      cxto.fillStyle = 'rgb(0,0,100)';
+      cxto.fillRect(0,0,largura, altura);
+
+      cxto.translate(largura/2, altura/2);
+
+      function degToRad(degrees) {
+        return degrees * Math.PI / 180;
+      }
+
+      function numAleatorio(min, max) {
+        return Math.floor(Math.random() * (max-min+1)) + (min);
+      }
+
+      let tamanho = numAleatorio(0,255);
+      let moveOffset = 3;
+
+      for(var i = 0; i < tamanho; i++) {
+        cxto.fillStyle = 'rgba(' + (255-tamanho) + ', 0, ' + (255-tamanho) + ', 0.9)';
+        cxto.beginPath();
+        cxto.moveTo(moveOffset, moveOffset);
+        cxto.lineTo(moveOffset+tamanho, moveOffset);
+        let triHeight = tamanho/2 * Math.tan(degToRad(60));
+        cxto.lineTo(moveOffset+(tamanho/2), moveOffset+triHeight);
+        cxto.lineTo(moveOffset, moveOffset);
+        cxto.fill();
+
+        tamanho--;
+        moveOffset += 0.7;
+        cxto.rotate(degToRad(5));
+      }
+    </script>
+  </body>
+</html>
